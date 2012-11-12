@@ -1,0 +1,61 @@
+<!doctype html>
+<!-- HTML5 Boilerplate -->
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<title>responsive boilerplate</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="res/css/compiled/styles.css">
+
+<!--[if (lt IE 9) & (!IEMobile)]>
+<script src="res/js/libs/selectivizr-min.js"></script>
+<![endif]-->
+
+<!-- JavaScript -->
+<script src="js/modernizr-2.5.3-min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="msapplication-TileColor" content="#000">
+<meta http-equiv="cleartype" content="on">
+</head>
+
+<body class="clearfix">
+
+<header role="banner" class="clearfix">
+<h1>Starter Kit</h1>
+</header>
+
+<div class="content clearfix">
+</div>	
+
+
+<footer>
+
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="res/js/js/jquery-1.7.2.min.js"><\/script>')</script>
+<script>
+	yepnope({
+		test : Modernizr.mq('(min-width: 0px)') || document.getElementsByTagName('html')[0].className.indexOf('oldie') > -1,
+		yep : ['res/js/libs/helper.js','res/js/libs/helper.js','res/js/global.js'],
+		callback : function(url, result, key){
+			if (url === 'res/js/global.js') {
+				GLOBAL.init();
+				MBP.scaleFix();
+				MBP.hideUrlBar();
+			};
+		}
+	});
+</script>
+
+</body>
+</html>
